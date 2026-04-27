@@ -1,0 +1,235 @@
+/* 教师端主题颜色修复文件 */
+
+/* 教师端全局主题变量重置 */
+body.teacher-page {
+  --el-color-primary: #409EFF !important;
+  --el-color-primary-light-1: #53a8ff !important;
+  --el-color-primary-light-2: #66b1ff !important;
+  --el-color-primary-dark-2: #337ecc !important;
+}
+
+/* 教师端页面标题栏样式修复 - 蓝色背景风格 */
+body.teacher-page .custom-card-header,
+body.teacher-page [class*="header"],
+body.teacher-page .page-header,
+body.teacher-page .el-card__header,
+body.teacher-page .card-header,
+body.teacher-page .panel-heading,
+body.teacher-page .title-bar,
+body.teacher-page .section-header,
+body.teacher-page [style*="background-color: rgb(102, 177, 255)"],
+body.teacher-page [style*="background-color:#66b1ff"],
+body.teacher-page [style*="background: rgb(102, 177, 255)"],
+body.teacher-page [style*="background:#66b1ff"] {
+  background-color: #409EFF !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(64, 158, 255, 0.15) !important;
+  border: none !important;
+}
+
+body.teacher-page .custom-card-header *,
+body.teacher-page [class*="header"] *,
+body.teacher-page .page-header *,
+body.teacher-page .el-card__header *,
+body.teacher-page .card-header *,
+body.teacher-page .panel-heading *,
+body.teacher-page .title-bar *,
+body.teacher-page .section-header *,
+body.teacher-page [style*="background-color: rgb(102, 177, 255)"] *,
+body.teacher-page [style*="background-color:#66b1ff"] *,
+body.teacher-page [style*="background: rgb(102, 177, 255)"] *,
+body.teacher-page [style*="background:#66b1ff"] * {
+  color: #ffffff !important;
+}
+
+/* 教师端按钮样式修复 - 简洁风格 */
+body.teacher-page .el-button--primary {
+  background-color: #409EFF !important;
+  border-color: #409EFF !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+body.teacher-page .el-button--primary:hover {
+  background-color: #66b1ff !important;
+  border-color: #66b1ff !important;
+  color: #ffffff !important;
+}
+
+body.teacher-page .el-button--primary span,
+body.teacher-page .el-button--primary i {
+  color: #ffffff !important;
+}
+
+/* 教师端分页组件样式修复 - 圆滑现代风格 */
+body.teacher-page .el-pagination .btn-next,
+body.teacher-page .el-pagination .btn-prev {
+  background-color: #409EFF !important;
+  border-color: #409EFF !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 4px rgba(64, 158, 255, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.teacher-page .el-pagination .btn-next:hover,
+body.teacher-page .el-pagination .btn-prev:hover {
+  background-color: #66b1ff !important;
+  border-color: #66b1ff !important;
+  box-shadow: 0 4px 8px rgba(64, 158, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+body.teacher-page .el-pagination .el-pager li.active {
+  background-color: #409EFF !important;
+  border-color: #409EFF !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 4px rgba(64, 158, 255, 0.2) !important;
+}
+
+body.teacher-page .el-pagination .el-pager li {
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+body.teacher-page .el-pagination .el-pager li:hover {
+  background-color: #f0f9ff !important;
+  border-color: #409EFF !important;
+  color: #409EFF !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 确保管理员端不受教师端主题影响 - 强化保护 */
+body.admin-page {
+  --el-color-primary: #67C23A !important;
+  --el-color-primary-light-1: #85ce61 !important;
+  --el-color-primary-light-2: #95d475 !important;
+  --el-color-primary-dark-2: #529b2e !important;
+}
+
+body.admin-page .el-button--primary,
+body.admin-page .el-table .el-button--primary,
+body.admin-page .el-card .el-button--primary,
+body.admin-page .el-dialog .el-button--primary,
+body.admin-page .el-form .el-button--primary,
+body.admin-page button,
+body.admin-page .el-button {
+  background-color: #67C23A !important;
+  border-color: #67C23A !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+body.admin-page .el-button--primary:hover,
+body.admin-page .el-table .el-button--primary:hover,
+body.admin-page .el-card .el-button--primary:hover,
+body.admin-page .el-dialog .el-button--primary:hover,
+body.admin-page .el-form .el-button--primary:hover,
+body.admin-page button:hover,
+body.admin-page .el-button:hover {
+  background-color: #85ce61 !important;
+  border-color: #85ce61 !important;
+  color: #ffffff !important;
+}
+
+/* 管理员端标题栏保护 */
+body.admin-page .custom-card-header,
+body.admin-page [class*="header"],
+body.admin-page .page-header,
+body.admin-page .el-card__header {
+  background-color: #67C23A !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+}
+
+/* 教师端表格和卡片内按钮修复 - 简洁风格 */
+body.teacher-page .el-table .el-button--primary,
+body.teacher-page .el-card .el-button--primary,
+body.teacher-page .el-dialog .el-button--primary {
+  background-color: #409EFF !important;
+  border-color: #409EFF !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+body.teacher-page .el-table .el-button--primary:hover,
+body.teacher-page .el-card .el-button--primary:hover,
+body.teacher-page .el-dialog .el-button--primary:hover {
+  background-color: #66b1ff !important;
+  border-color: #66b1ff !important;
+  color: #ffffff !important;
+}
+
+/* 教师端按钮文字强制修复 */
+body.teacher-page .el-button--primary span,
+body.teacher-page .el-button--primary i,
+body.teacher-page .el-table .el-button--primary span,
+body.teacher-page .el-table .el-button--primary i,
+body.teacher-page .el-card .el-button--primary span,
+body.teacher-page .el-card .el-button--primary i {
+  color: #ffffff !important;
+}
+
+/* 教师端表格头部修复 - 强制覆盖紫色 */
+body.teacher-page .el-table th,
+body.teacher-page .el-table__header-wrapper,
+body.teacher-page .el-table__header,
+body.teacher-page .el-table thead th,
+body.teacher-page .el-table thead,
+body.teacher-page [style*="background-color: rgb(102, 177, 255)"],
+body.teacher-page [style*="background-color:#66b1ff"],
+body.teacher-page [style*="background: rgb(102, 177, 255)"],
+body.teacher-page [style*="background:#66b1ff"] {
+  background-color: #409EFF !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+}
+
+/* 教师端所有蓝色背景元素统一修复 */
+body.teacher-page [style*="background-color: rgb(64, 158, 255)"],
+body.teacher-page [style*="background-color:#409EFF"],
+body.teacher-page [style*="background: rgb(64, 158, 255)"],
+body.teacher-page [style*="background:#409EFF"] {
+  background-color: #409EFF !important;
+  color: #ffffff !important;
+}
+
+body.teacher-page [style*="background-color: rgb(64, 158, 255)"] *,
+body.teacher-page [style*="background-color:#409EFF"] *,
+body.teacher-page [style*="background: rgb(64, 158, 255)"] *,
+body.teacher-page [style*="background:#409EFF"] *,
+body.teacher-page .el-table th *,
+body.teacher-page .el-table__header-wrapper *,
+body.teacher-page .el-table__header *,
+body.teacher-page .el-table thead th *,
+body.teacher-page .el-table thead * {
+  color: #ffffff !important;
+}
+
+/* 强制修复紫色按钮为蓝色 - 仅针对主要按钮 */
+body.teacher-page .el-button--primary,
+body.teacher-page [style*="background-color: rgb(138, 43, 226)"],
+body.teacher-page [style*="background-color:#8a2be2"],
+body.teacher-page [style*="background: rgb(138, 43, 226)"],
+body.teacher-page [style*="background:#8a2be2"],
+body.teacher-page [style*="background-color: rgb(147, 112, 219)"],
+body.teacher-page [style*="background-color:#9370db"],
+body.teacher-page [style*="background: rgb(147, 112, 219)"],
+body.teacher-page [style*="background:#9370db"] {
+  background: linear-gradient(135deg, #409EFF 0%, #66b1ff 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(64, 158, 255, 0.2) !important;
+}
+
+body.teacher-page .el-button--primary:hover {
+  background: linear-gradient(135deg, #66b1ff 0%, #409EFF 100%) !important;
+  box-shadow: 0 4px 8px rgba(64, 158, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
+}

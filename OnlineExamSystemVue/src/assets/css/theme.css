@@ -1,0 +1,2678 @@
+/* 全局主题样式 - 浅色模式和深色模式 */
+
+/* 浅色模式（默认） */
+.light-theme {
+  --bg-color: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --bg-tertiary: #e8f0ff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --nav-bg: #2384d9;
+  --nav-text: #ffffff;
+  --sidebar-bg: #2384d9;
+  --sidebar-text: #ffffff;
+  --button-primary: #409eff;
+  --button-success: #67c23a;
+  --button-warning: #e6a23c;
+  --button-danger: #f56c6c;
+  --input-bg: #ffffff;
+  --input-border: #dcdfe6;
+  --table-header: #f8f9ff;
+  --table-row-hover: rgba(102, 126, 234, 0.05);
+}
+
+/* 深色模式 */
+.dark-theme {
+  --bg-color: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3a3a3a;
+  --text-primary: #e5e7eb;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --border-color: #4b5563;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --card-bg: #374762;
+  --nav-bg: #1e3a8a;
+  --nav-text: #ffffff;
+  --sidebar-bg: #1f2937;
+  --sidebar-text: #f9fafb;
+  --button-primary: #3b82f6;
+  --button-success: #10b981;
+  --button-warning: #f59e0b;
+  --button-danger: #ef4444;
+  --input-bg: #4a5568;
+  --input-border: #6b7280;
+  --table-header: #4b5563;
+  --table-row-hover: rgba(59, 130, 246, 0.25);
+}
+
+/* 应用主题变量到全局元素 */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 强制文字颜色适配 */
+* {
+  color: var(--text-primary);
+}
+
+/* 确保所有文本元素都有正确的颜色 */
+h1, h2, h3, h4, h5, h6, p, span, div, td, th, li {
+  color: var(--text-primary) !important;
+}
+
+/* 答题界面底部操作栏保持蓝色 */
+#answer .operation .end li:first-child,
+#answer .operation .end li:last-child,
+#answer .operation .end li:first-child span,
+#answer .operation .end li:last-child span,
+#answer .operation .end li:first-child i,
+#answer .operation .end li:last-child i {
+  color: #409EFF !important;
+}
+
+/* 标记按钮文字白色 */
+#answer .operation .end li:nth-child(2) span {
+  color: #fff !important;
+}
+
+/* 答题界面顶部标题栏文字白色 */
+#answer .top .item .item-top span,
+#answer .top .item .item-top i {
+  color: #fff !important;
+}
+
+/* 答题用时文字白色 */
+#answer .left .elapsed-time-display,
+#answer .left .elapsed-time-display span,
+#answer .left .elapsed-time-display i {
+  color: #fff !important;
+}
+
+/* AI学习助手标题白色 */
+.ai-chat-header,
+.ai-chat-header span,
+.ai-chat-header i {
+  color: #fff !important;
+}
+
+/* AI助手悬浮按钮图标和文字白色 */
+.ai-float-btn,
+.ai-float-btn i,
+.ai-float-btn span {
+  color: #fff !important;
+}
+
+/* Element UI 组件文字颜色强制适配 */
+.el-table__body-wrapper .el-table__body .el-table__row .el-table__cell {
+  color: var(--text-primary) !important;
+}
+
+.el-table__header-wrapper .el-table__header .el-table__row .el-table__cell {
+  color: var(--text-primary) !important;
+}
+
+/* 表格内所有文字 */
+.el-table .cell {
+  color: var(--text-primary) !important;
+}
+
+/* 分页组件文字 */
+.el-pagination .el-pagination__total,
+.el-pagination .el-pagination__jump,
+.el-pagination .el-pagination__sizes .el-select .el-input .el-input__inner {
+  color: var(--text-primary) !important;
+}
+
+/* 表单标签文字 */
+.el-form-item__label {
+  color: var(--text-primary) !important;
+}
+
+/* 输入框文字 */
+.el-input__inner,
+.el-textarea__inner {
+  color: var(--text-primary) !important;
+}
+
+/* 选择框文字 */
+.el-select .el-input .el-input__inner {
+  color: var(--text-primary) !important;
+}
+
+/* 按钮文字 */
+.el-button {
+  color: var(--text-primary) !important;
+}
+
+.el-button--primary {
+  color: #ffffff !important;
+}
+
+.el-button--primary span {
+  color: #ffffff !important;
+}
+
+/* 确保所有主按钮内的文字都是白色 */
+.el-button--primary,
+.el-button--primary *,
+.el-button[type="primary"],
+.el-button[type="primary"] * {
+  color: #ffffff !important;
+}
+
+/* 对话框文字 */
+.el-dialog__title,
+.el-dialog__body {
+  color: var(--text-primary) !important;
+}
+
+/* 图标主题适配 */
+[class*="el-icon-"],
+i[class*="el-icon-"] {
+  color: var(--text-primary) !important;
+}
+
+/* 按钮内的图标保持按钮颜色 */
+.el-button [class*="el-icon-"] {
+  color: inherit !important;
+}
+
+/* 头部通知铃铛按钮样式 - 与调色板按钮一致 */
+.notification-wrapper .notification-btn.el-button.is-circle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  padding: 0 !important;
+}
+
+.notification-wrapper .notification-btn.el-button.is-circle:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.notification-wrapper .notification-btn.el-button.is-circle i {
+  font-size: 18px !important;
+  color: var(--primary-color, #2384d6) !important;
+}
+
+/* 调色板按钮图标随主题色变化 */
+.palette-btn i,
+.theme-palette .palette-btn i {
+  color: var(--primary-color, #2384d6) !important;
+}
+
+/* 导航栏图标 */
+.nav-tab .tab-icon,
+.nav-actions i {
+  color: var(--text-primary) !important;
+}
+
+/* 表格操作按钮图标 */
+.el-table .el-button [class*="el-icon-"] {
+  color: inherit !important;
+}
+
+/* 修复暗色模式下鼠标悬停时的字体颜色 */
+.dark-theme .el-card:hover .chart-title,
+.dark-theme .el-card:hover .page-title,
+.dark-theme .el-card:hover .page-subtitle,
+.dark-theme .stats-card:hover .stats-value,
+.dark-theme .stats-card:hover .stats-label,
+.dark-theme .question-item:hover .question-content {
+  color: #1a1a1a !important;
+}
+
+/* 移除全局悬停效果，只保留特定元素的悬停效果 */
+
+/* 只修复下拉框选项文字为黑色 */
+.dark-theme .el-select-dropdown .el-option {
+  color: #1a1a1a !important;
+}
+
+/* 下拉框选项悬停效果 */
+.dark-theme .el-select-dropdown .el-option:hover {
+  color: #1a1a1a !important;
+  background-color: #f5f7fa !important;
+}
+
+/* 下拉框选项选中效果 */
+.dark-theme .el-select-dropdown .el-option.selected {
+  color: #1a1a1a !important;
+  background-color: #e8f4fd !important;
+}
+
+/* AI生成页面暗色模式适配 */
+.dark-theme .ai-generate .form-card,
+.dark-theme .ai-generate .result-card {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* AI生成页面页面头部适配 */
+.dark-theme .ai-generate .page-header {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* AI生成页面卡片头部适配 */
+.dark-theme .ai-generate .card-header {
+  background: var(--bg-tertiary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* AI生成页面分隔线样式（与自动组卷保持一致） */
+.ai-generate .el-divider__text {
+  color: #1a1a1a !important;
+  background-color: #e5e7eb !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  border: 1px solid #d1d5db !important;
+  font-weight: 500 !important;
+}
+
+/* 暗色模式下AI生成页面分隔线样式 */
+.dark-theme .ai-generate .el-divider__text {
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  border: 1px solid #e4e7ed !important;
+}
+
+/* AI生成页面居中布局 */
+.ai-generate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.ai-generate .box-card {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* AI生成页面与自动组卷页面保持一致的样式 */
+.dark-theme .ai-generate .box-card {
+  background-color: #374151 !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* AI生成页面卡片头部样式 */
+.dark-theme .ai-generate .box-card .el-card__header {
+  background-color: var(--bg-tertiary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+
+/* 自动组卷页面暗色模式适配 */
+.dark-theme .auto-paper .el-divider__text {
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+}
+
+/* 题型设置和难度设置背景为白色，文字为黑色 */
+.dark-theme .auto-paper .el-divider .el-divider__text {
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  border: 1px solid #e4e7ed !important;
+}
+
+/* 预计总分框内文字为浅绿色 */
+.dark-theme .auto-paper .el-tag--success {
+  background-color: rgba(103, 194, 58, 0.15) !important;
+  border-color: rgba(103, 194, 58, 0.3) !important;
+  color: #67C23A !important;
+}
+
+/* 重置按钮样式优化 - 深色半透明风格 */
+.dark-theme .auto-paper .el-button:not(.el-button--primary) {
+  background-color: rgba(61, 74, 92, 0.8) !important;
+  border-color: rgba(61, 74, 92, 0.9) !important;
+  color: #fff !important;
+}
+
+.dark-theme .auto-paper .el-button:not(.el-button--primary):hover {
+  background-color: rgba(74, 90, 110, 0.9) !important;
+  border-color: rgba(74, 90, 110, 1) !important;
+  color: #fff !important;
+}
+
+/* 深色模式下拉框悬停时文字变黑色 */
+.dark-theme .el-select-dropdown__item:hover,
+.dark-theme .el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover,
+.el-select-dropdown__item.hover {
+  color: #333 !important;
+  background-color: #f5f7fa !important;
+}
+
+/* 深色模式下卡片样式 */
+.dark-theme .el-card {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-theme .el-card__header {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  border-bottom-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .el-card__body {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 成绩分段分析页面卡片样式 */
+.dark-theme .score-part-container .el-card,
+.dark-theme .score-analysis .el-card {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-theme .score-part-container .box-card,
+.dark-theme .score-analysis .box-card {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* 成绩分段分析页面深色模式 */
+.dark-theme .part .page-header {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-theme .part .page-header .page-title {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .part .page-header .page-subtitle {
+  color: #a0a0a0 !important;
+}
+
+.dark-theme .part .toolbar {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-theme .part .stats-card {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-theme .part .stats-card .stats-value {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .part .stats-card .stats-label {
+  color: var(--text-secondary) !important;
+}
+
+.dark-theme .part .chart-card {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-theme .part .chart-card .chart-header {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+.dark-theme .part .chart-card .chart-title {
+  color: #fff !important;
+}
+
+/* 图表区域标题白色 */
+.dark-theme .part .chart-header .chart-title,
+.dark-theme .chart-header .chart-title {
+  color: #fff !important;
+}
+
+/* 下拉框选项悬停 - span元素也需要设置 */
+.dark-theme .el-select-dropdown__item:hover span,
+.dark-theme .el-select-dropdown__item.hover span,
+.el-select-dropdown__item:hover span,
+.el-select-dropdown__item.hover span {
+  color: #333 !important;
+}
+
+/* 暗色模式下输入框背景颜色与对话框一致 */
+.dark-theme .el-input__inner,
+.dark-theme .el-textarea__inner,
+.dark-theme .el-select .el-input__inner,
+.dark-theme .el-input-number .el-input__inner {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: #ffffff !important;
+}
+
+/* 暗色模式下计数器文字为白色 */
+.dark-theme .el-input-number .el-input__inner {
+  color: #ffffff !important;
+}
+
+/* 暗色模式下输入框聚焦效果 */
+.dark-theme .el-input__inner:focus,
+.dark-theme .el-textarea__inner:focus {
+  border-color: #409eff !important;
+  background-color: var(--bg-secondary) !important;
+  color: #ffffff !important;
+}
+
+/* 暗色模式下数字输入框上下箭头按钮颜色 */
+.dark-theme .el-input-number__increase,
+.dark-theme .el-input-number__decrease {
+  background-color: #ffffff !important;
+  border-color: var(--border-color) !important;
+  color: #1a1a1a !important;
+}
+
+/* 暗色模式下数字输入框箭头按钮悬停效果 */
+.dark-theme .el-input-number__increase:hover,
+.dark-theme .el-input-number__decrease:hover {
+  background-color: #f5f7fa !important;
+  color: #1a1a1a !important;
+}
+
+/* 暗色模式下数字输入框箭头图标 */
+.dark-theme .el-input-number__increase i,
+.dark-theme .el-input-number__decrease i {
+  color: #1a1a1a !important;
+}
+
+/* 暗色模式下自动组卷页面特殊文字颜色 */
+.dark-theme .auto-paper .el-form-item__label {
+  color: var(--text-primary) !important;
+}
+
+/* 暗色模式下题目统计文字 */
+.dark-theme .auto-paper span {
+  color: var(--text-primary) !important;
+}
+
+/* 暗色模式下所有下拉框悬停效果增强 */
+.dark-theme .el-select-dropdown .el-option:hover {
+  color: var(--text-primary) !important;
+  background-color: #f5f7fa !important;
+}
+
+/* 暗色模式下下拉框选中项 */
+.dark-theme .el-select-dropdown .el-option.selected {
+  color: var(--text-primary) !important;
+  background-color: #e8f4fd !important;
+}
+
+/* 导航栏主题 */
+#topbar {
+  background-color: var(--nav-bg) !important;
+  color: var(--nav-text) !important;
+}
+
+/* 确保头部导航栏中的系统标题始终为白色 */
+#topbar .system-title-text,
+#topbar .topbar-left span {
+  color: white !important;
+}
+
+/* 头部导航栏中的所有文字都应该是白色（排除下拉菜单） */
+#topbar *:not(.out):not(.out *) {
+  color: white !important;
+}
+
+/* 浅色模式下用户头像下拉菜单样式 */
+.light-theme #topbar .out {
+  background-color: #fff !important;
+}
+
+.light-theme #topbar .out,
+.light-theme #topbar .out * {
+  color: #000 !important;
+}
+
+.light-theme #topbar .out a:hover {
+  color: #409eff !important;
+}
+
+/* 深色模式下用户头像下拉菜单样式 */
+.dark-theme #topbar .out {
+  background-color: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-theme #topbar .out,
+.dark-theme #topbar .out * {
+  color: #e2e8f0 !important;
+}
+
+.dark-theme #topbar .out a:hover {
+  color: #818cf8 !important;
+}
+
+.dark-theme #topbar .out .exit {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 左侧导航栏主题 */
+#left {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.el-menu-vertical-demo {
+  background-color: var(--sidebar-bg) !important;
+  border-right: none !important;
+}
+
+.el-submenu {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.el-submenu__title {
+  background-color: var(--sidebar-bg) !important;
+  color: var(--sidebar-text) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.el-submenu__title:hover {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.el-submenu .el-menu {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.el-menu-item {
+  background-color: var(--sidebar-bg) !important;
+  color: var(--sidebar-text) !important;
+}
+
+/* 全局菜单项悬停样式 - 保持原色不变 */
+.el-menu-item:hover {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.el-menu-item.is-active {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: var(--sidebar-text) !important;
+}
+
+.el-menu-item-group__title {
+  color: var(--sidebar-text) !important;
+}
+
+/* 左侧导航栏图标 */
+.left-width .iconfont {
+  color: var(--sidebar-text) !important;
+}
+
+.left-width .title {
+  color: var(--sidebar-text) !important;
+}
+
+/* 卡片和容器主题 */
+.el-card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-card__header {
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 表格主题 */
+.el-table {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-table th {
+  background-color: var(--table-header) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.el-table td {
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-table__row:hover {
+  background-color: var(--table-row-hover) !important;
+}
+
+.el-table__header-wrapper {
+  background-color: var(--table-header) !important;
+}
+
+/* 输入框主题 */
+.el-input__inner {
+  background-color: var(--input-bg) !important;
+  border-color: var(--input-border) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-input__inner:focus {
+  border-color: var(--button-primary) !important;
+}
+
+.el-textarea__inner {
+  background-color: var(--input-bg) !important;
+  border-color: var(--input-border) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 选择框主题 */
+.el-select-dropdown {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.el-option {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-option:hover {
+  background-color: var(--table-row-hover) !important;
+}
+
+/* 对话框主题 */
+.el-dialog {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-dialog__header {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-dialog__title {
+  color: var(--text-primary) !important;
+}
+
+.el-dialog__body {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 分页组件主题 */
+.el-pagination {
+  color: var(--text-primary) !important;
+}
+
+.el-pagination button {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.el-pagination button:hover {
+  color: var(--button-primary) !important;
+}
+
+.el-pagination .el-pager li {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.el-pagination .el-pager li:hover {
+  color: var(--button-primary) !important;
+}
+
+.el-pagination .el-pager li.active {
+  background-color: var(--button-primary) !important;
+  color: #ffffff !important;
+}
+
+/* 标签页主题 */
+.el-tabs__header {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.el-tabs__item {
+  color: var(--text-secondary) !important;
+}
+
+.el-tabs__item.is-active {
+  color: var(--button-primary) !important;
+}
+
+.el-tabs__content {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 暗色模式下题目统计文字精确修复（选择题: x道 填空题: x道 判断题: x道） */
+.dark-theme .auto-paper .el-tag--info {
+  color: #1a1a1a !important;
+}
+
+/* 暗色模式下日期选择器输入框内文字为白色 */
+.dark-theme .auto-paper .exam-date-item .el-input__inner {
+  color: #ffffff !important;
+}
+
+/* 增强日期选择器文字颜色 - 使用更强的选择器 */
+.dark-theme .exam-date-item .el-date-editor .el-input__inner {
+  color: #ffffff !important;
+}
+
+.dark-theme .exam-date-item .el-date-editor input {
+  color: #ffffff !important;
+}
+
+/* 强制覆盖Element UI日期选择器样式 */
+.dark-theme .el-date-editor.el-input .el-input__inner {
+  color: #ffffff !important;
+}
+
+.dark-theme .el-date-editor input[type="text"] {
+  color: #ffffff !important;
+}
+
+/* 最强优先级覆盖 */
+.dark-theme .auto-paper .el-date-editor .el-input__inner {
+  color: #ffffff !important;
+}
+
+/* 深色模式下标签数据值颜色修复 */
+.dark-theme .el-tag {
+  color: #ffffff !important;
+}
+
+.dark-theme .el-tag.el-tag--success {
+  color: #ffffff !important;
+  background-color: #67c23a !important;
+}
+
+.dark-theme .el-tag.el-tag--danger {
+  color: #ffffff !important;
+  background-color: #f56c6c !important;
+}
+
+.dark-theme .el-tag.el-tag--warning {
+  color: #ffffff !important;
+  background-color: #e6a23c !important;
+}
+
+.dark-theme .el-tag.el-tag--info {
+  color: #ffffff !important;
+  background-color: #909399 !important;
+}
+
+/* 暗色模式下字数统计方框颜色 */
+.dark-theme .el-input__count {
+  background-color: #4B5563 !important;
+  color: #ffffff !important;
+}
+
+/* 增强数据分析页面暗色模式样式 */
+.dark-theme .enhanced-analysis .page-header {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark-theme .enhanced-analysis .page-title {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .enhanced-analysis .page-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+.dark-theme .enhanced-analysis .stats-card {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .enhanced-analysis .stats-value {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .enhanced-analysis .stats-label {
+  color: var(--text-secondary) !important;
+}
+
+.dark-theme .enhanced-analysis .chart-card {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dark-theme .enhanced-analysis .chart-title {
+  color: var(--text-primary) !important;
+}
+
+/* 暗色模式下日期选择器弹出面板样式 */
+.dark-theme .el-picker-panel {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-theme .el-date-picker {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 日期面板头部 */
+.dark-theme .el-picker-panel__header {
+  background-color: var(--bg-tertiary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 日期面板内容 */
+.dark-theme .el-picker-panel__content {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 日期表格 */
+.dark-theme .el-date-table {
+  background-color: var(--card-bg) !important;
+}
+
+.dark-theme .el-date-table td {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .el-date-table td.available:hover {
+  background-color: var(--table-row-hover) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .el-date-table td.current {
+  background-color: var(--button-primary) !important;
+  color: #ffffff !important;
+}
+
+/* 月份年份选择器 */
+.dark-theme .el-picker-panel__header button {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .el-picker-panel__header button:hover {
+  color: var(--button-primary) !important;
+}
+
+/* 面包屑导航主题 */
+.el-breadcrumb__inner {
+  color: var(--text-primary) !important;
+}
+
+.el-breadcrumb__separator {
+  color: var(--text-secondary) !important;
+}
+
+/* 面包屑悬停样式 */
+.el-breadcrumb__inner:hover {
+  color: var(--button-primary) !important;
+  cursor: pointer;
+}
+
+/* 浅色模式下面包屑悬停样式 */
+.light-theme .el-breadcrumb__inner:hover {
+  color: #409eff !important;
+}
+
+/* 深色模式下面包屑悬停样式 */
+.dark-theme .el-breadcrumb__inner:hover {
+  color: #60a5fa !important;
+}
+
+/* 消息提示主题 */
+.el-message {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 工具提示主题 */
+.el-tooltip__popper {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* 图表容器主题 */
+.chart-container {
+  background-color: var(--card-bg) !important;
+}
+
+/* 自定义组件主题 */
+.main_wrapper {
+  background-color: var(--bg-color) !important;
+}
+
+.container {
+  background-color: var(--bg-color) !important;
+}
+
+/* 表单主题 */
+.el-form-item__label {
+  color: var(--text-primary) !important;
+}
+
+/* 按钮主题调整 */
+.el-button--primary {
+  background-color: var(--button-primary) !important;
+  border-color: var(--button-primary) !important;
+}
+
+.el-button--success {
+  background-color: var(--button-success) !important;
+  border-color: var(--button-success) !important;
+}
+
+.el-button--warning {
+  background-color: var(--button-warning) !important;
+  border-color: var(--button-warning) !important;
+}
+
+.el-button--danger {
+  background-color: var(--button-danger) !important;
+  border-color: var(--button-danger) !important;
+}
+
+/* 深色模式下的特殊调整 */
+.dark-theme .el-card {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-theme .chart-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-theme .stats-card {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 深色模式下的左侧导航栏特殊处理 */
+.dark-theme .el-submenu__title:hover {
+  background-color: transparent !important;
+}
+
+.dark-theme .el-menu-item:hover {
+  background-color: transparent !important;
+}
+
+/* 强制覆盖所有菜单悬停效果 - 使用属性选择器 */
+#student-left .el-submenu__title[style],
+#student-left .el-menu-item[style] {
+  background-color: transparent !important;
+}
+
+.el-submenu__title:hover,
+.el-submenu__title[style*="background"],
+.el-menu-item:hover,
+.el-menu-item[style*="background"] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.dark-theme .el-menu-item.is-active {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+/* 深色模式下的表格优化 */
+.dark-theme .el-table {
+  background-color: var(--card-bg) !important;
+}
+
+.dark-theme .el-table th {
+  background-color: var(--table-header) !important;
+}
+
+.dark-theme .el-table td {
+  background-color: var(--card-bg) !important;
+}
+
+/* 深色模式下的输入框优化 */
+.dark-theme .el-input__inner {
+  background-color: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .el-textarea__inner {
+  background-color: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 深色模式下的选择框优化 */
+.dark-theme .el-select-dropdown {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-theme .el-option {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .el-option:hover {
+  background-color: var(--table-row-hover) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 暗色模式下的对话框标题特殊处理 */
+.dark-theme .el-dialog__title {
+  color: #ffffff !important;
+}
+
+.dark-theme .el-dialog__header {
+  color: #ffffff !important;
+}
+
+/* 深色模式下统一表单样式 */
+.dark-theme .el-card {
+  background-color: #374762 !important;
+  border: 1px solid #4a5568 !important;
+}
+
+.dark-theme .el-card__header {
+  background-color: #374762 !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #4a5568 !important;
+  font-weight: 600 !important;
+}
+
+.dark-theme .el-card__header .clearfix span,
+.dark-theme .el-card__header span {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.dark-theme .el-card__body {
+  background-color: #374762 !important;
+  color: var(--text-primary) !important;
+}
+
+/* 统一表单容器样式 */
+.dark-theme .search-filter-bar,
+.dark-theme .search-filter-section,
+.dark-theme .table-container,
+.dark-theme .demo-form-inline,
+.dark-theme .form-container {
+  background-color: #374762 !important;
+  border: 1px solid #4a5568 !important;
+  border-radius: 8px !important;
+}
+
+/* 统一输入框样式 - 与下拉框保持一致的灰色配色 */
+.dark-theme .el-input__inner,
+.dark-theme .el-textarea__inner {
+  background-color: #4b5563 !important;
+  border: 1px solid #6b7280 !important;
+  color: #e5e7eb !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark-theme .el-input__inner:hover,
+.dark-theme .el-textarea__inner:hover {
+  background-color: #374151 !important;
+  border-color: #9ca3af !important;
+}
+
+.dark-theme .el-input__inner:focus,
+.dark-theme .el-textarea__inner:focus {
+  background-color: #374151 !important;
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2) !important;
+}
+
+/* 输入框占位符文字颜色 */
+.dark-theme .el-input__inner::placeholder,
+.dark-theme .el-textarea__inner::placeholder {
+  color: #9ca3af !important;
+}
+
+/* 统一选择框样式 - 优雅灰色配色 */
+.dark-theme .el-select .el-input__inner {
+  background-color: #4b5563 !important;
+  border: 1px solid #6b7280 !important;
+  color: #e5e7eb !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark-theme .el-select .el-input__inner:hover {
+  background-color: #374151 !important;
+  border-color: #9ca3af !important;
+}
+
+.dark-theme .el-select .el-input__inner:focus {
+  background-color: #374151 !important;
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2) !important;
+}
+
+/* 下拉选项样式 */
+.dark-theme .el-select-dropdown {
+  background-color: #374151 !important;
+  border: 1px solid #6b7280 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-theme .el-select-dropdown .el-select-dropdown__item {
+  background-color: #374151 !important;
+  color: #e5e7eb !important;
+}
+
+/* 更强的选择器确保悬停白色文字生效 */
+body.dark-theme .el-select-dropdown .el-select-dropdown__item:hover,
+.dark-theme .el-select-dropdown .el-select-dropdown__item:hover,
+.dark-theme .el-popper .el-select-dropdown__item:hover {
+  background-color: #4b5563 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .el-option:hover {
+  background-color: #4b5563 !important;
+  color: #ffffff !important;
+}
+
+/* 覆盖所有可能的下拉框悬停样式 */
+.dark-theme .el-select-dropdown__item:hover,
+.dark-theme .el-popper[x-placement] .el-select-dropdown__item:hover,
+body.dark-theme .el-select-dropdown__item:hover,
+html.dark-theme .el-select-dropdown__item:hover {
+  background-color: #4b5563 !important;
+  color: #ffffff !important;
+}
+
+/* 特别针对Element UI的选项悬停 */
+.dark-theme .el-select-dropdown__wrap .el-select-dropdown__item:hover {
+  background-color: #4b5563 !important;
+  color: #ffffff !important;
+}
+
+/* 使用最高优先级的选择器强制白色文字 */
+.el-select-dropdown.is-multiple .el-select-dropdown__item:hover,
+.el-select-dropdown .el-select-dropdown__item:hover,
+.el-popper .el-select-dropdown__item:hover,
+.el-select-dropdown__item:hover {
+  color: #ffffff !important;
+  background-color: #4b5563 !important;
+}
+
+/* 针对具体的悬停状态 */
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  color: #ffffff !important;
+  background-color: #4b5563 !important;
+}
+
+.dark-theme .el-select-dropdown .el-select-dropdown__item.selected {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+}
+
+/* 统一按钮样式 */
+.dark-theme .el-button {
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark-theme .el-button--primary {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .el-button--primary:hover {
+  background-color: #2563eb !important;
+  border-color: #2563eb !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark-theme .el-button--success {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+.dark-theme .el-button--danger {
+  background-color: #ef4444 !important;
+  border-color: #ef4444 !important;
+}
+
+.dark-theme .el-button--default {
+  background-color: #4b5563 !important;
+  border-color: #6b7280 !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .el-button--default:hover {
+  background-color: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+/* 自动组卷页面特殊样式 - 使用深灰色 */
+.dark-theme .auto-paper .el-card {
+  background-color: #3a3a3a !important;
+  border: 1px solid #4b5563 !important;
+}
+
+.dark-theme .auto-paper .el-card__header {
+  background-color: #385076 !important;
+  color: #93c5fd !important;
+  border-bottom: 1px solid #4a5568 !important;
+}
+
+.dark-theme .auto-paper .el-card__header .clearfix span,
+.dark-theme .auto-paper .el-card__header span {
+  color: #93c5fd !important;
+  font-weight: 600 !important;
+}
+
+.dark-theme .auto-paper .el-card__body {
+  background-color: #3a3a3a !important;
+}
+
+.dark-theme .auto-paper .search-filter-bar,
+.dark-theme .auto-paper .search-filter-section,
+.dark-theme .auto-paper .table-container,
+.dark-theme .auto-paper .demo-form-inline,
+.dark-theme .auto-paper .form-container {
+  background-color: #3a3a3a !important;
+  border: 1px solid #4b5563 !important;
+}
+
+/* AI智能生成题目页面特殊样式 - 与自动组卷保持一致 */
+body.dark-theme .ai-generate .el-card .el-card__header,
+.dark-theme div.ai-generate .el-card .el-card__header,
+.dark-theme .ai-generate .box-card .el-card__header {
+  background-color: #385076 !important;
+  color: #93c5fd !important;
+  border-bottom: 1px solid #4a5568 !important;
+}
+
+body.dark-theme .ai-generate .el-card .el-card__header .clearfix span,
+body.dark-theme .ai-generate .el-card .el-card__header span,
+.dark-theme div.ai-generate .el-card .el-card__header .clearfix span,
+.dark-theme div.ai-generate .el-card .el-card__header span,
+.dark-theme .ai-generate .box-card .el-card__header .clearfix span,
+.dark-theme .ai-generate .box-card .el-card__header span {
+  color: #93c5fd !important;
+  font-weight: 600 !important;
+}
+
+/* 使用特定类名的AI卡片样式 */
+.dark-theme .ai-card-custom .el-card__header {
+  background-color: #385076 !important;
+  color: #93c5fd !important;
+  border-bottom: 1px solid #4a5568 !important;
+}
+
+.dark-theme .ai-card-custom .el-card__header .clearfix span,
+.dark-theme .ai-card-custom .el-card__header span {
+  color: #93c5fd !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+
+/* AI智能生成题目表单内容使用深灰色 */
+.dark-theme .ai-card-custom {
+  background-color: #3a3a3a !important;
+  border: 1px solid #4b5563 !important;
+}
+
+.dark-theme .ai-card-custom .el-card__body {
+  background-color: #3a3a3a !important;
+}
+
+.dark-theme .ai-generate .generate-form {
+  background-color: #3a3a3a !important;
+}
+
+/* 添加学生页面深灰色样式 */
+.dark-theme .add {
+  background-color: #3a3a3a !important;
+  border: 1px solid #4b5563 !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+}
+
+.dark-theme .add .form-header {
+  background-color: #385076 !important;
+  color: #93c5fd !important;
+  padding: 15px 20px !important;
+  margin: -20px -20px 20px -20px !important;
+  border-radius: 8px 8px 0 0 !important;
+  border-bottom: 1px solid #4a5568 !important;
+}
+
+.dark-theme .add .form-header h3 {
+  color: #93c5fd !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  margin: 0 !important;
+}
+
+
+.dark-theme .el-dialog__header .el-dialog__title {
+  color: #ffffff !important;
+}
+
+/* 确保所有对话框内的标题都是白色 */
+.dark-theme .el-dialog .el-dialog__title {
+  color: #ffffff !important;
+}
+
+/* 最终解决方案：强制下拉框悬停白色文字 */
+* .el-select-dropdown__item:hover,
+* .el-option:hover,
+div .el-select-dropdown__item:hover,
+body * .el-select-dropdown__item:hover {
+  color: #ffffff !important;
+  background-color: #4b5563 !important;
+}
+
+/* 使用通配符确保覆盖所有情况 */
+*[class*="el-select-dropdown__item"]:hover,
+*[class*="el-option"]:hover {
+  color: #ffffff !important;
+  background-color: #4b5563 !important;
+}
+
+/* 终极方案：在文件末尾强制覆盖 */
+
+.dark-theme .el-dialog[aria-label*="试卷"] .el-dialog__title,
+.dark-theme .el-dialog[aria-label*="编辑"] .el-dialog__title {
+  color: #ffffff !important;
+}
+
+/* 更全面的对话框标题样式覆盖 */
+.dark-theme .el-dialog__wrapper .el-dialog__header .el-dialog__title {
+  color: #ffffff !important;
+}
+
+.dark-theme .el-dialog__wrapper .el-dialog .el-dialog__header {
+  color: #ffffff !important;
+}
+
+/* 针对具体的对话框标题 */
+.dark-theme .el-dialog__header span {
+  color: #ffffff !important;
+}
+
+.dark-theme .el-dialog__headerbtn .el-dialog__close {
+  color: #ffffff !important;
+}
+
+/* 强制覆盖所有可能的对话框标题样式 */
+.dark-theme .el-dialog * .el-dialog__title {
+  color: #ffffff !important;
+}
+
+.dark-theme [role="dialog"] .el-dialog__title {
+  color: #ffffff !important;
+}
+
+/* 浅色模式下的特殊处理 - 优雅的悬停效果 */
+html body.light-theme .el-submenu__title:hover,
+body.light-theme .el-submenu__title:hover {
+  background-color: rgba(64, 158, 255, 0.2) !important;
+  color: #ffffff !important;
+  transform: translateX(2px) !important;
+  transition: all 0.3s ease !important;
+}
+
+html body.light-theme .el-menu-item:hover,
+body.light-theme .el-menu-item:hover {
+  background-color: rgba(64, 158, 255, 0.2) !important;
+  color: #ffffff !important;
+  transform: translateX(2px) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: inset 3px 0 0 rgba(64, 158, 255, 0.8) !important;
+}
+
+html body.light-theme .el-menu-item.is-active,
+body.light-theme .el-menu-item.is-active {
+  background-color: rgba(64, 158, 255, 0.3) !important;
+  color: #ffffff !important;
+  box-shadow: inset 3px 0 0 #409eff !important;
+}
+
+/* 确保左侧导航栏在浅色模式下使用正确的背景色 */
+.light-theme #left {
+  background-color: #2384d9 !important;
+}
+
+.light-theme .el-menu-vertical-demo {
+  background-color: #2384d9 !important;
+}
+
+.light-theme .el-submenu {
+  background-color: #2384d9 !important;
+}
+
+.light-theme .el-submenu__title {
+  background-color: #2384d9 !important;
+  color: #ffffff !important;
+}
+
+.light-theme .el-submenu .el-menu {
+  background-color: #2384d9 !important;
+}
+
+.light-theme .el-menu-item {
+  background-color: #2384d9 !important;
+  color: #ffffff !important;
+}
+
+/* 过渡动画 */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 滚动条主题 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-muted);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+
+/* 暗色模式下右上角三点菜单下拉框样式 */
+.dark-theme .el-dropdown-menu {
+  background-color: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark-theme .el-dropdown-menu__item {
+  color: #e2e8f0 !important;
+  background-color: transparent !important;
+}
+
+.dark-theme .el-dropdown-menu__item:hover,
+.dark-theme .el-dropdown-menu__item:focus {
+  background-color: rgba(129, 140, 248, 0.2) !important;
+  color: #818cf8 !important;
+}
+
+.dark-theme .el-dropdown-menu__item--divided {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 下拉菜单箭头 */
+.dark-theme .el-popper[x-placement^="bottom"] .popper__arrow {
+  border-bottom-color: #1e293b !important;
+}
+
+.dark-theme .el-popper[x-placement^="bottom"] .popper__arrow::after {
+  border-bottom-color: #1e293b !important;
+}
+
+.dark-theme .el-popper[x-placement^="top"] .popper__arrow {
+  border-top-color: #1e293b !important;
+}
+
+.dark-theme .el-popper[x-placement^="top"] .popper__arrow::after {
+  border-top-color: #1e293b !important;
+}
+
+/* 暗色模式下卡片悬停时不改变文字颜色 */
+.dark-theme .el-card:hover *,
+.dark-theme .stats-card:hover *,
+.dark-theme .chart-card:hover * {
+  color: inherit;
+}
+
+/* 移除暗色模式下悬停时字体变黑的问题 */
+.dark-theme .el-card:hover .chart-title,
+.dark-theme .el-card:hover .page-title,
+.dark-theme .el-card:hover .page-subtitle,
+.dark-theme .stats-card:hover .stats-value,
+.dark-theme .stats-card:hover .stats-label {
+  color: var(--text-primary) !important;
+}
+
+/* 暗色模式下编辑试题页面的提示文字样式 */
+.dark-theme .add .title span,
+.dark-theme .add .change .title span,
+.dark-theme .add .fill .title span,
+.dark-theme .add .judge .title span {
+  color: #1a1a1a !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  display: inline-block !important;
+  margin-left: 8px !important;
+}
+
+/* 暗色模式下编辑试题页面的输入框背景 */
+.dark-theme .add .el-textarea__inner,
+.dark-theme .add .el-input__inner {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1a1a1a !important;
+  border-color: #dcdfe6 !important;
+}
+
+/* 暗色模式下编辑试题页面的选项输入框 */
+.dark-theme .add .options .el-input__inner {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1a1a1a !important;
+}
+
+/* 暗色模式下下拉框选项悬停时文字变黑色 */
+.dark-theme .el-select-dropdown__item:hover,
+.dark-theme .el-select-dropdown__item.hover {
+  color: #1a1a1a !important;
+}
+
+/* 暗色模式下操作按钮样式优化 - 半透明风格 */
+.dark-theme .el-button--primary {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  border: 1px solid rgba(59, 130, 246, 0.5) !important;
+  color: #60a5fa !important;
+}
+
+.dark-theme .el-button--primary:hover {
+  background-color: rgba(59, 130, 246, 0.25) !important;
+  border-color: rgba(59, 130, 246, 0.7) !important;
+  color: #93c5fd !important;
+}
+
+.dark-theme .el-button--danger {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border: 1px solid rgba(239, 68, 68, 0.5) !important;
+  color: #f87171 !important;
+}
+
+.dark-theme .el-button--danger:hover {
+  background-color: rgba(239, 68, 68, 0.25) !important;
+  border-color: rgba(239, 68, 68, 0.7) !important;
+  color: #fca5a5 !important;
+}
+
+.dark-theme .el-button--success {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid rgba(16, 185, 129, 0.5) !important;
+  color: #34d399 !important;
+}
+
+.dark-theme .el-button--success:hover {
+  background-color: rgba(16, 185, 129, 0.25) !important;
+  border-color: rgba(16, 185, 129, 0.7) !important;
+  color: #6ee7b7 !important;
+}
+
+.dark-theme .el-button--warning {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  border: 1px solid rgba(245, 158, 11, 0.5) !important;
+  color: #fbbf24 !important;
+}
+
+.dark-theme .el-button--warning:hover {
+  background-color: rgba(245, 158, 11, 0.25) !important;
+  border-color: rgba(245, 158, 11, 0.7) !important;
+  color: #fcd34d !important;
+}
+
+.dark-theme .el-button--info {
+  background-color: rgba(107, 114, 128, 0.15) !important;
+  border: 1px solid rgba(107, 114, 128, 0.5) !important;
+  color: #9ca3af !important;
+}
+
+.dark-theme .el-button--info:hover {
+  background-color: rgba(107, 114, 128, 0.25) !important;
+  border-color: rgba(107, 114, 128, 0.7) !important;
+  color: #d1d5db !important;
+}
+
+/* 暗色模式下默认按钮样式 - 半透明风格 */
+.dark-theme .el-button--default {
+  background-color: rgba(75, 85, 99, 0.15) !important;
+  border: 1px solid rgba(75, 85, 99, 0.5) !important;
+  color: #9ca3af !important;
+}
+
+.dark-theme .el-button--default:hover {
+  background-color: rgba(75, 85, 99, 0.25) !important;
+  border-color: rgba(75, 85, 99, 0.7) !important;
+  color: #d1d5db !important;
+}
+
+/* 确保按钮尺寸和字体一致 */
+.dark-theme .el-button {
+  min-width: auto !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+
+/* 浅色模式下按钮半透明风格 */
+.light-theme .el-button {
+  min-width: auto !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+
+/* 浅色模式按钮图标和文字统一为黑色 */
+.light-theme .el-button,
+.light-theme .el-button i,
+.light-theme .el-button span,
+.light-theme .el-button [class*="el-icon-"],
+.light-theme .el-button--primary,
+.light-theme .el-button--success,
+.light-theme .el-button--warning,
+.light-theme .el-button--danger,
+.light-theme .el-button--info,
+.light-theme .el-button--default {
+  color: #1a1a1a !important;
+}
+
+/* 浅色模式按钮悬停时保持黑色 */
+.light-theme .el-button:hover,
+.light-theme .el-button:hover i,
+.light-theme .el-button:hover span {
+  color: #1a1a1a !important;
+}
+
+/* 浅色模式下表格固定列背景色 */
+.light-theme .el-table__fixed,
+.light-theme .el-table__fixed-right {
+  background-color: #ffffff !important;
+}
+
+.light-theme .el-table__fixed-right .el-table__body tr td,
+.light-theme .el-table__fixed .el-table__body tr td {
+  background-color: #ffffff !important;
+}
+
+.light-theme .el-table__fixed-right-patch {
+  background-color: #ffffff !important;
+}
+
+/* 浅色模式下试卷详情总分和时长文字颜色 */
+.light-theme .score-info,
+.light-theme .time-info,
+.light-theme .score-info i,
+.light-theme .time-info i {
+  color: #1a1a1a !important;
+}
+
+/* 修复浏览器自动填充导致的输入框颜色问题 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #606266 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.dark-theme input:-webkit-autofill,
+.dark-theme input:-webkit-autofill:hover,
+.dark-theme input:-webkit-autofill:focus,
+.dark-theme input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #4b5563 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 暗色模式下拉框悬停选项文字颜色 */
+.dark-theme .el-select-dropdown__item.hover,
+.dark-theme .el-select-dropdown__item:hover {
+  color: #1a1a1a !important;
+}
+
+/* 暗色模式下卡片样式 */
+.dark-theme .el-card,
+.dark-theme .stats-card,
+.dark-theme .chart-card {
+  background-color: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+.dark-theme .stats-card .stats-value,
+.dark-theme .chart-card .chart-title {
+  color: #ffffff !important;
+}
+
+.dark-theme .stats-card .stats-label,
+.dark-theme .chart-card .no-data-text p {
+  color: #9ca3af !important;
+}
+
+.dark-theme .chart-card .chart-header {
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%) !important;
+  border-bottom-color: #4b5563 !important;
+}
+
+.dark-theme .chart-card .no-data-text h3 {
+  color: #ffffff !important;
+}
+
+/* 统一重置按钮图标大小 */
+.el-button .el-icon-refresh {
+  font-size: 14px !important;
+}
+
+/* 表单验证错误提示红色醒目样式 */
+.el-form-item__error {
+  color: #f56c6c !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.dark-theme .el-form-item__error {
+  color: #ff6b6b !important;
+}
+
+/* 验证错误时输入框边框变红 */
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-textarea__inner {
+  border-color: #f56c6c !important;
+}
+
+.dark-theme .el-form-item.is-error .el-input__inner,
+.dark-theme .el-form-item.is-error .el-textarea__inner {
+  border-color: #ff6b6b !important;
+}
+
+.light-theme .el-button--primary {
+  background-color: rgba(64, 158, 255, 0.15) !important;
+  border: 1px solid rgba(64, 158, 255, 0.5) !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .el-button--primary:hover {
+  background-color: rgba(64, 158, 255, 0.25) !important;
+  border-color: rgba(64, 158, 255, 0.7) !important;
+  color: #66b1ff !important;
+}
+
+.light-theme .el-button--danger {
+  background-color: rgba(245, 108, 108, 0.15) !important;
+  border: 1px solid rgba(245, 108, 108, 0.5) !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .el-button--danger:hover {
+  background-color: rgba(245, 108, 108, 0.25) !important;
+  border-color: rgba(245, 108, 108, 0.7) !important;
+  color: #f78989 !important;
+}
+
+.light-theme .el-button--success {
+  background-color: rgba(103, 194, 58, 0.15) !important;
+  border: 1px solid rgba(103, 194, 58, 0.5) !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .el-button--success:hover {
+  background-color: rgba(103, 194, 58, 0.25) !important;
+  border-color: rgba(103, 194, 58, 0.7) !important;
+  color: #85ce61 !important;
+}
+
+.light-theme .el-button--warning {
+  background-color: rgba(230, 162, 60, 0.15) !important;
+  border: 1px solid rgba(230, 162, 60, 0.5) !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .el-button--warning:hover {
+  background-color: rgba(230, 162, 60, 0.25) !important;
+  border-color: rgba(230, 162, 60, 0.7) !important;
+  color: #ebb563 !important;
+}
+
+.light-theme .el-button--info {
+  background-color: rgba(144, 147, 153, 0.15) !important;
+  border: 1px solid rgba(144, 147, 153, 0.5) !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .el-button--info:hover {
+  background-color: rgba(144, 147, 153, 0.25) !important;
+  border-color: rgba(144, 147, 153, 0.7) !important;
+  color: #a6a9ad !important;
+}
+
+.light-theme .el-button--default {
+  background-color: rgba(96, 98, 102, 0.1) !important;
+  border: 1px solid rgba(96, 98, 102, 0.3) !important;
+  color: #606266 !important;
+}
+
+.light-theme .el-button--default:hover {
+  background-color: rgba(96, 98, 102, 0.15) !important;
+  border-color: rgba(96, 98, 102, 0.5) !important;
+  color: #409eff !important;
+}
+
+/* 表格内操作按钮组样式 */
+.dark-theme .action-btns {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.dark-theme .action-btns .el-button {
+  margin: 0 !important;
+}
+
+/* 深色模式下添加学生/教师表单输入框样式 - 统一所有输入框 */
+.dark-theme .add .el-input .el-input__inner,
+.dark-theme .add .el-select .el-input .el-input__inner,
+.dark-theme .add .el-textarea .el-textarea__inner {
+  background-color: #4b5563 !important;
+  border-color: #6b7280 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .add .el-input .el-input__inner::placeholder,
+.dark-theme .add .el-select .el-input .el-input__inner::placeholder,
+.dark-theme .add .el-textarea .el-textarea__inner::placeholder {
+  color: #9ca3af !important;
+}
+
+/* 浅色模式下添加学生/教师表单输入框样式 - 统一为白色背景 */
+.light-theme .add .el-input .el-input__inner,
+.light-theme .add .el-select .el-input .el-input__inner,
+.light-theme .add .el-textarea .el-textarea__inner {
+  background-color: #ffffff !important;
+  border-color: #dcdfe6 !important;
+  color: #1a1a1a !important;
+}
+
+/* 浅色模式下拉框样式修复 - 基本样式 */
+.light-theme .el-select-dropdown {
+  background-color: #ffffff !important;
+}
+
+.light-theme .el-select-dropdown__item {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* 更强力的浅色模式下拉框文字颜色覆盖 */
+html body.light-theme .el-select-dropdown__item,
+body.light-theme .el-select-dropdown__item,
+.light-theme .el-popper .el-select-dropdown__item {
+  color: #000000 !important;
+}
+
+html body.light-theme .el-select-dropdown__item span,
+body.light-theme .el-select-dropdown__item span,
+.light-theme .el-popper .el-select-dropdown__item span {
+  color: #000000 !important;
+}
+
+/* 浅色模式下拉框悬停效果 */
+html body.light-theme .el-select-dropdown__item:hover,
+body.light-theme .el-select-dropdown__item:hover,
+.light-theme .el-popper .el-select-dropdown__item:hover {
+  background-color: #f0f0f0 !important;
+  color: #409eff !important;
+}
+
+html body.light-theme .el-select-dropdown__item:hover span,
+body.light-theme .el-select-dropdown__item:hover span,
+.light-theme .el-popper .el-select-dropdown__item:hover span {
+  color: #409eff !important;
+}
+
+/* 智能组卷页面按钮样式修复 */
+.auto-paper .el-button {
+  min-width: 120px !important;
+  height: 40px !important;
+  padding: 0 20px !important;
+  font-size: 14px !important;
+  line-height: 40px !important;
+}
+
+.auto-paper .el-form-item:last-child .el-form-item__content {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px !important;
+}
+
+/* 深色模式下智能组卷重置按钮半透明 */
+.dark-theme .auto-paper .el-button--default {
+  background-color: rgba(75, 85, 99, 0.15) !important;
+  border: 1px solid rgba(75, 85, 99, 0.5) !important;
+  color: #9ca3af !important;
+  height: 40px !important;
+}
+
+.dark-theme .auto-paper .el-button--default:hover {
+  background-color: rgba(75, 85, 99, 0.25) !important;
+  border-color: rgba(75, 85, 99, 0.7) !important;
+  color: #d1d5db !important;
+}
+
+/* 查询时闪入动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+/* 表格行闪入动画 - 每次数据更新都触发 */
+.el-table__body tr {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.el-table__body tr:nth-child(1) { animation-delay: 0.03s; }
+.el-table__body tr:nth-child(2) { animation-delay: 0.06s; }
+.el-table__body tr:nth-child(3) { animation-delay: 0.09s; }
+.el-table__body tr:nth-child(4) { animation-delay: 0.12s; }
+.el-table__body tr:nth-child(5) { animation-delay: 0.15s; }
+.el-table__body tr:nth-child(6) { animation-delay: 0.18s; }
+.el-table__body tr:nth-child(7) { animation-delay: 0.21s; }
+.el-table__body tr:nth-child(8) { animation-delay: 0.24s; }
+.el-table__body tr:nth-child(9) { animation-delay: 0.27s; }
+.el-table__body tr:nth-child(10) { animation-delay: 0.3s; }
+.el-table__body tr:nth-child(n+11) { animation-delay: 0.33s; }
+
+/* 卡片和列表项闪入动画 */
+.el-card {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* 下拉框选项闪入动画 */
+.el-select-dropdown__item {
+  animation: fadeInUp 0.2s ease-out forwards;
+}
+
+.el-select-dropdown__item:nth-child(1) { animation-delay: 0.02s; }
+.el-select-dropdown__item:nth-child(2) { animation-delay: 0.04s; }
+.el-select-dropdown__item:nth-child(3) { animation-delay: 0.06s; }
+.el-select-dropdown__item:nth-child(4) { animation-delay: 0.08s; }
+.el-select-dropdown__item:nth-child(5) { animation-delay: 0.1s; }
+
+/* 深色模式下密码输入框小眼睛图标样式 */
+.dark-theme .el-input__suffix .el-input__icon {
+  color: #9ca3af !important;
+}
+
+.dark-theme .el-input__suffix .el-input__icon:hover {
+  color: #ffffff !important;
+}
+
+/* 修复深色模式下用户头像下拉菜单文字不显示的问题 */
+.user .out,
+.user .out * {
+  color: #000 !important;
+}
+
+.user .out a {
+  color: #000 !important;
+}
+
+.user .out ul li {
+  color: #000 !important;
+}
+
+.user .out ul li a {
+  color: #000 !important;
+}
+
+.user .out ul li a:hover {
+  color: #409eff !important;
+}
+
+/* ==================== 表格表头蓝色样式 ==================== */
+/* 通用表格表头蓝色背景 */
+.el-table th.el-table__cell {
+  background-color: #e8f0ff !important;
+  color: #1a56db !important;
+  font-weight: 600 !important;
+}
+
+.el-table th.el-table__cell .cell {
+  color: #1a56db !important;
+}
+
+/* 表格行悬停效果 */
+.light-theme .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #f0f7ff !important;
+}
+
+.dark-theme .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: var(--table-row-hover) !important;
+}
+
+/* 深色模式下表格表头保持默认样式 */
+.dark-theme .el-table th.el-table__cell {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .el-table th.el-table__cell .cell {
+  color: var(--text-primary) !important;
+}
+
+/* 表单卡片头部蓝色样式 */
+.form-header,
+.page-header:not(.student-trend .page-header),
+.card-header:not(.student-trend .card-header):not(.custom-card-header) {
+  background: linear-gradient(135deg, #e8f0ff 0%, #dbeafe 100%) !important;
+  border-bottom: 1px solid #bfdbfe !important;
+  padding: 16px 20px !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.form-header h2,
+.form-header h3,
+.page-header:not(.student-trend .page-header) h2,
+.page-header:not(.student-trend .page-header) h3,
+.card-header:not(.student-trend .card-header) h2,
+.card-header:not(.student-trend .card-header) h3 {
+  color: #1e40af !important;
+  margin: 0 !important;
+  font-weight: 600 !important;
+}
+
+/* 成绩趋势页面使用主题色 */
+.student-trend .page-header {
+  background: var(--primary-color, #409EFF) !important;
+  border-bottom: none !important;
+}
+
+.student-trend .page-header h2 {
+  color: #fff !important;
+}
+
+/* 成绩趋势页面卡片标题使用主题色 */
+.student-trend .custom-card-header {
+  background: var(--primary-color, #409EFF) !important;
+  color: #fff !important;
+}
+
+.student-trend .custom-card-header span {
+  color: #fff !important;
+}
+
+.student-trend .custom-card-header .el-switch__label {
+  color: #fff !important;
+}
+
+/* 成绩趋势页面标题栏按钮样式 */
+.student-trend .page-header .header-btn {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: var(--primary-color, #409EFF) !important;
+  font-weight: 500;
+}
+
+.student-trend .page-header .header-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.student-trend .page-header .header-btn i {
+  color: var(--primary-color, #409EFF) !important;
+}
+
+/* 深色模式下表单头部 */
+.dark-theme .form-header,
+.dark-theme .page-header,
+.dark-theme .card-header {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%) !important;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark-theme .form-header h2,
+.dark-theme .form-header h3,
+.dark-theme .page-header h2,
+.dark-theme .page-header h3,
+.dark-theme .card-header h2,
+.dark-theme .card-header h3 {
+  color: #93c5fd !important;
+}
+
+/* ========== 浅色模式下拉框悬停样式 ========== */
+.light-theme .el-select-dropdown__item:hover,
+.light-theme .el-option:hover,
+body:not(.dark-theme) .el-select-dropdown__item:hover,
+body:not(.dark-theme) .el-option:hover {
+  color: #409eff !important;
+  background-color: #ecf5ff !important;
+}
+
+.light-theme .el-select-dropdown__item,
+body:not(.dark-theme) .el-select-dropdown__item {
+  color: #606266 !important;
+  background-color: #ffffff !important;
+}
+
+/* ========== 深色模式下拉框悬停样式 ========== */
+.dark-theme .el-select-dropdown__item:hover,
+.dark-theme .el-option:hover {
+  color: white !important;
+  background-color: #4b5563 !important;
+}
+
+.dark-theme .el-select-dropdown__item {
+  color: #e5e7eb !important;
+  background-color: #374151 !important;
+}
+
+/* 深色模式CSS变量 */
+.dark-theme {
+  --el-text-color-primary: #ffffff;
+}
+
+/* 终极解决方案：浅色模式导航栏悬停效果 */
+html body.light-theme #left .el-menu-item:hover,
+html body.light-theme .el-menu-vertical-demo .el-menu-item:hover,
+body.light-theme #left .el-menu-item:hover,
+.light-theme #left .el-menu-item:hover {
+  background-color: rgba(64, 158, 255, 0.25) !important;
+  color: #ffffff !important;
+  transform: translateX(3px) !important;
+  transition: all 0.2s ease !important;
+  border-left: 3px solid #409eff !important;
+}
+
+html body.light-theme #left .el-submenu__title:hover,
+html body.light-theme .el-menu-vertical-demo .el-submenu__title:hover,
+body.light-theme #left .el-submenu__title:hover,
+.light-theme #left .el-submenu__title:hover {
+  background-color: rgba(64, 158, 255, 0.25) !important;
+  color: #ffffff !important;
+  transform: translateX(3px) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* 深色模式下拉框样式 - 仅限深色模式 */
+.dark-theme .el-select-dropdown li:hover,
+.dark-theme .el-select-dropdown__item:hover,
+.dark-theme .el-option:hover {
+  color: #ffffff !important;
+  background-color: #4b5563 !important;
+}
+
+.dark-theme .el-select-dropdown__item,
+.dark-theme .el-option {
+  color: #e5e7eb !important;
+  background-color: #374151 !important;
+}
+
+/* ========== 浅色模式下拉框最终方案 ========== */
+body:not(.dark-theme) .el-select-dropdown__item,
+body:not(.dark-theme) .el-select-dropdown__item span,
+.light-theme .el-select-dropdown__item,
+.light-theme .el-select-dropdown__item span {
+  color: #606266 !important;
+  background-color: #ffffff !important;
+}
+
+body:not(.dark-theme) .el-select-dropdown__item:hover,
+body:not(.dark-theme) .el-select-dropdown__item:hover span,
+.light-theme .el-select-dropdown__item:hover,
+.light-theme .el-select-dropdown__item:hover span {
+  background-color: #ecf5ff !important;
+  color: #409eff !important;
+}
+
+/* 深色模式下拉框样式 */
+.dark-theme .el-select-dropdown__item,
+.dark-theme .el-select-dropdown__item span {
+  color: #e5e7eb !important;
+  background-color: #374151 !important;
+}
+
+.dark-theme .el-select-dropdown__item:hover,
+.dark-theme .el-select-dropdown__item:hover span {
+  color: #ffffff !important;
+  background-color: #4b5563 !important;
+}
+
+/* ========== 导航栏悬停样式终极修复 ========== */
+/* 子菜单项悬停 - 最高优先级 */
+#left .el-menu-item:hover,
+.el-menu-vertical-demo .el-menu-item:hover,
+.el-menu .el-menu-item:hover {
+  background-color: rgba(64, 158, 255, 0.35) !important;
+  color: #ffffff !important;
+  transform: translateX(3px) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* 父菜单悬停 - 最高优先级 */
+#left .el-submenu__title:hover,
+.el-menu-vertical-demo .el-submenu__title:hover,
+.el-menu .el-submenu__title:hover {
+  background-color: rgba(64, 158, 255, 0.35) !important;
+  color: #ffffff !important;
+  transform: translateX(3px) !important;
+  transition: all 0.2s ease !important;
+}
+
+html body.light-theme .el-select-dropdown__item:hover * {
+  color: #409eff !important;
+}
+
+/* ========== 深色模式下MessageBox/Confirm弹出框样式 ========== */
+.dark-theme .el-message-box {
+  background-color: #1E2D3A !important;
+  border: 1px solid #4b5563 !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-theme .el-message-box__header {
+  background-color: #1E2D3A !important;
+  border-bottom: 1px solid #4b5563 !important;
+}
+
+.dark-theme .el-message-box__title {
+  color: #ffffff !important;
+}
+
+.dark-theme .el-message-box__content {
+  background-color: #1E2D3A !important;
+  color: #e5e7eb !important;
+}
+
+.dark-theme .el-message-box__message {
+  color: #e5e7eb !important;
+}
+
+.dark-theme .el-message-box__message p {
+  color: #e5e7eb !important;
+}
+
+.dark-theme .el-message-box__btns {
+  background-color: #1E2D3A !important;
+  border-top: 1px solid #4b5563 !important;
+}
+
+.dark-theme .el-message-box__headerbtn .el-message-box__close {
+  color: #9ca3af !important;
+}
+
+.dark-theme .el-message-box__headerbtn .el-message-box__close:hover {
+  color: #ffffff !important;
+}
+
+/* ========== 深色模式下el-tag样式修复 ========== */
+.dark-theme .el-tag--light {
+  background-color: #1E2D3A !important;
+  border-color: #4b5563 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .el-tag--light span {
+  color: #ffffff !important;
+}
+
+/* 成绩查询页面图表类型切换按钮样式 */
+.dark-theme .chart-toolbar .el-radio-group {
+  background-color: #1E2D3A !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+.dark-theme .chart-toolbar .el-radio-button__inner {
+  background-color: #1E2D3A !important;
+  border-color: #4b5563 !important;
+  color: #9ca3af !important;
+}
+
+.dark-theme .chart-toolbar .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .chart-toolbar .el-radio-button__inner:hover {
+  color: #60a5fa !important;
+}
+
+/* 未选中状态的radio-button文字颜色 - 荧光蓝 */
+.dark-theme .el-radio-button:not(.is-active) .el-radio-button__inner {
+  color: #60a5fa !important;
+  background-color: #1E2D3A !important;
+}
+
+/* ========== 深色模式下成绩分段页面el-tag修复 ========== */
+.dark-theme .el-tag.el-tag--light {
+  background-color: #1E2D3A !important;
+  color: #ffffff !important;
+  border-color: #4b5563 !important;
+}
+
+/* 深色模式下所有el-tag保持可读性 */
+.dark-theme .stats-card .el-tag,
+.dark-theme .enhanced-analysis .el-tag {
+  color: #ffffff !important;
+}
+
+/* ========== 学生端悬停效果修复 ========== */
+
+/* 学生端导航菜单悬停 - 使用蓝色高亮而非灰色 */
+#student .list li:hover {
+  background-color: rgba(1, 149, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+#student .list li:hover a {
+  color: #0195ff !important;
+}
+
+/* 学生端用户下拉菜单悬停 */
+#student .right .msg p:hover {
+  background-color: #0195ff !important;
+  color: #ffffff !important;
+}
+
+#student .right .msg p:hover * {
+  color: #ffffff !important;
+}
+
+/* 学生端试卷卡片悬停效果 - 保持文字颜色不变 */
+#myExam .paper .item:hover,
+.paper .item:hover {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(1, 149, 255, 0.25) !important;
+  transform: scale(1.03) !important;
+  border-color: #0195ff !important;
+}
+
+/* 卡片悬停时保持文字颜色 */
+#myExam .paper .item:hover > div,
+.paper .item:hover > div {
+  color: #333333 !important;
+}
+
+#myExam .paper .item:hover .name,
+.paper .item:hover .name {
+  color: #88949b !important;
+}
+
+#myExam .paper .item:hover .info,
+.paper .item:hover .info {
+  color: #88949b !important;
+}
+
+#myExam .paper .item:hover .info span,
+.paper .item:hover .info span {
+  color: #88949b !important;
+}
+
+/* 学生端试卷列表标签悬停 - 保持文字颜色 */
+#myExam .top li:first-child:hover,
+.wrapper .top li:first-child:hover {
+  background-color: transparent !important;
+}
+
+#myExam .top li:first-child,
+#myExam .top li:first-child *,
+#myExam .top li:first-child:hover,
+#myExam .top li:first-child:hover *,
+.wrapper .top li:first-child,
+.wrapper .top li:first-child *,
+.wrapper .top li:first-child:hover,
+.wrapper .top li:first-child:hover * {
+  color: #1a1a1a !important;
+}
+
+/* 分页下拉选项悬停 - 浅蓝色而非灰色（最高优先级） */
+body .el-select-dropdown__item:hover,
+body .el-select-dropdown__item.hover,
+html .el-select-dropdown__item:hover,
+html .el-select-dropdown__item.hover,
+.el-popper .el-select-dropdown__item:hover,
+.el-popper .el-select-dropdown__item.hover,
+.el-select-dropdown .el-select-dropdown__item:hover,
+.el-select-dropdown .el-select-dropdown__item.hover {
+  background-color: #ecf5ff !important;
+  color: #409eff !important;
+}
+
+/* 覆盖之前的灰色悬停样式 */
+.el-select-dropdown__item:hover,
+.el-select-dropdown__item.hover {
+  background-color: #ecf5ff !important;
+  color: #409eff !important;
+}
+
+/* 下拉选项文字颜色 */
+.el-select-dropdown__item:hover span,
+.el-select-dropdown__item.hover span {
+  color: #409eff !important;
+}
+
+/* 学生端底部链接悬停 */
+#footer ul li a:hover,
+#footer a:hover {
+  color: #0195ff !important;
+  background-color: transparent !important;
+}
+
+/* 学生端搜索按钮悬停 */
+#myExam .el-button--primary:hover,
+#student .el-button--primary:hover {
+  background-color: #0182e0 !important;
+  border-color: #0182e0 !important;
+  color: #ffffff !important;
+}
+
+/* 学生端分页下拉选项悬停 - 浅色模式 */
+.light-theme .el-select-dropdown__item:hover,
+.light-theme .el-option:hover {
+  background-color: #f5f7fa !important;
+  color: #409eff !important;
+}
+
+/* 学生端分页按钮悬停 */
+.el-pagination .el-pager li:hover {
+  color: #409eff !important;
+  background-color: transparent !important;
+}
+
+/* 学生端搜索框聚焦 */
+#myExam .search:focus,
+.top .search:focus {
+  border-color: #0195ff !important;
+  box-shadow: 0 0 0 2px rgba(1, 149, 255, 0.2) !important;
+}
+
+/* 视图切换按钮样式 */
+.view-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-switch .el-button {
+  padding: 8px 12px !important;
+}
+
+.view-switch .el-button.is-active,
+.view-switch .el-button.active {
+  background-color: #0195ff !important;
+  border-color: #0195ff !important;
+  color: #ffffff !important;
+}
+
+.view-switch .el-button:not(.is-active):not(.active) {
+  background-color: #f5f7fa !important;
+  border-color: #dcdfe6 !important;
+  color: #606266 !important;
+}
+
+.view-switch .el-button:not(.is-active):not(.active):hover {
+  background-color: #e6f0fa !important;
+  border-color: #0195ff !important;
+  color: #0195ff !important;
+}
+
+/* 列表视图样式 */
+.list-view .item {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 15px 20px !important;
+  margin: 10px 0 !important;
+  border-radius: 8px !important;
+}
+
+.list-view .item .info {
+  display: flex !important;
+  gap: 20px !important;
+}
+
+.list-view .item .name {
+  margin: 5px 0 !important;
+}
+
+/* ========== 管理员端表格主题色适配 ========== */
+/* 管理员端表格表头使用主题色 */
+#admin-main .el-table th,
+#admin-main .el-table__header-wrapper th {
+  background-color: var(--admin-primary, #6366f1) !important;
+  color: #fff !important;
+}
+
+#admin-main .el-table th .cell,
+#admin-main .el-table__header-wrapper th .cell {
+  color: #fff !important;
+}
+
+/* 管理员端分页器当前页使用主题色 */
+#admin-main .el-pagination .el-pager li.active {
+  background-color: var(--admin-primary, #6366f1) !important;
+  color: #fff !important;
+}
+
+#admin-main .el-pagination .el-pager li:hover {
+  color: var(--admin-primary, #6366f1) !important;
+}
+
+/* 管理员端操作按钮样式 - 统一风格：主题色背景+白色图标文字 */
+#admin-main .el-button--primary,
+#admin-main .el-button--danger {
+  background-color: var(--admin-primary, #6366f1) !important;
+  border-color: var(--admin-primary, #6366f1) !important;
+  color: #fff !important;
+}
+
+#admin-main .el-button--primary i,
+#admin-main .el-button--primary span,
+#admin-main .el-button--danger i,
+#admin-main .el-button--danger span {
+  color: #fff !important;
+}
+
+/* 管理员端表格内操作按钮 - 编辑和删除统一风格 */
+#admin-main .el-table .action-btns .el-button--primary,
+#admin-main .el-table .action-btns .el-button--danger,
+#admin-main .action-btns .el-button--primary,
+#admin-main .action-btns .el-button--danger {
+  background-color: var(--admin-primary, #6366f1) !important;
+  border-color: var(--admin-primary, #6366f1) !important;
+  color: #fff !important;
+}
+
+#admin-main .el-table .action-btns .el-button--primary i,
+#admin-main .el-table .action-btns .el-button--primary span,
+#admin-main .el-table .action-btns .el-button--danger i,
+#admin-main .el-table .action-btns .el-button--danger span,
+#admin-main .action-btns .el-button--primary i,
+#admin-main .action-btns .el-button--primary span,
+#admin-main .action-btns .el-button--danger i,
+#admin-main .action-btns .el-button--danger span {
+  color: #fff !important;
+}
+
+/* 管理员端导出/导入/刷新按钮 - 统一风格 */
+#admin-main .table-actions .el-button {
+  background-color: var(--admin-primary, #6366f1) !important;
+  border-color: var(--admin-primary, #6366f1) !important;
+  color: #fff !important;
+}
+
+#admin-main .table-actions .el-button i,
+#admin-main .table-actions .el-button span {
+  color: #fff !important;
+}
+
+#admin-main .table-actions .el-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
